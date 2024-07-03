@@ -1,0 +1,7 @@
+config.py
+bot GPT.py
+__pycache__/
+pyvenv.cfg
+Include/
+Lib/
+Scripts/
