@@ -1,30 +1,16 @@
 # 👉 🙏 👆 👇 😅 👋 🙌 ☺️ ❗ ️‼️ ✌️ 👌 ✊ 👨‍💻  🤖 😉  ☝️ ❤️ 💪 ✍️ 🎯  ⛔  ️✅ 📊📈🧮   🗳️
-#from telegram import Update
-#import telebot
-import config #создаем config.py и пишем там: TOKEN = 'TOKEN', скрываем в .gitignore
-import json, time, random
-from aiogram import Bot, Dispatcher, types
+#import json, time, random
+import time
+
 from aiogram.utils import executor
+from helper_init import dp, bot
 
-bot = Bot(token = config.TOKEN)
-dp = Dispatcher(bot)
 
-@dp.message_handler(commands=['start'])
-async def send_welcome(message: types.Message):
-    await message.reply(f'->DEBUG INF Chat ID: {message.chat.id}<-\nHi-hello🙃, You stared BuildOnTon bot\nGame&chill!😉\nPress /commands for a list of commands', parse_mode='Markdown')
+from handlers import client
+client.register_handlers(dp)
 
-@dp.message_handler(commands=['commands','help'])
-async def commands(message: types.Message):
-    await message.reply(f'/start\n/socials\n', parse_mode='Markdown')
 
-# #Открываем файл socials.md в режиме чтения
-with open('socials.md', 'r') as file:
-    # Читаем содержимое файла
-    content = file.read()
 
-@dp.message_handler(commands=['socials'])
-async def socials(message: types.Message):
-    await message.reply(content, parse_mode='Markdown', disable_web_page_preview=True)
 
 
 
