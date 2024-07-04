@@ -1,11 +1,12 @@
 # handlers.py
 from aiogram import Dispatcher, types
 from helper_init import dp, bot
-
+from keyboards import kb_client
 
 #@dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
     await message.reply(f'->DEBUG INF Chat ID: {message.chat.id}<-\nHi-hello🙃, You stared BuildOnTon bot\nGame&chill!😉\nPress /commands for a list of commands', parse_mode='Markdown')
+    await bot.send_message(message.from_user.id, 'KK', replay_markup=kb_client)
 
 #@dp.message_handler(commands=['commands','help'])
 async def commands(message: types.Message):
