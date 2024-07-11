@@ -6,16 +6,18 @@ from aiogram.utils import executor
 from helper_init import dp, bot
 
 
-from handlers import client
+from handlers import client, menu
 client.register_handlers(dp)
+menu.register_handlers(dp)
+
+
+TOKEN = '5269574080:AAHaas4dFEG75FV1UE0uIsRUk1zWV0Ej-P0'
 
 
 
 
 
-
-
-
+ 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
     while True:  # запускаем бесконечный цикл
