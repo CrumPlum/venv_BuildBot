@@ -11,7 +11,6 @@ client.register_handlers(dp)
 menu.register_handlers(dp)
 
 
-TOKEN = '5269574080:AAHaas4dFEG75FV1UE0uIsRUk1zWV0Ej-P0'
 
 
 
