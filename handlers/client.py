@@ -3,11 +3,12 @@ from aiogram import Dispatcher, types
 from helper_init import dp, bot
 
 
-#@dp.message_handler(commands=['start'])
+
 async def start(message: types.Message):
     await message.reply(f'->DEBUG INF Chat ID: {message.chat.id}<-\nHi-hello🙃, You stared BuildOnTon bot\nGame&chill!😉\nPress /commands for a list of commands', parse_mode='Markdown')
+ 
 
-#@dp.message_handler(commands=['commands','help'])
+
 async def commands(message: types.Message):
     await message.reply(f'/start\n/socials\n/privacy\n/menu\n', parse_mode='Markdown')
 
