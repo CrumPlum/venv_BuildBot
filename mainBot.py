@@ -6,9 +6,10 @@ from aiogram.utils import executor
 from helper_init import dp, bot
 
 
-from handlers import client, menu
+from handlers import client
+#from handlers import menu
 client.register_handlers(dp)
-menu.register_handlers(dp)
+#menu.register_handlers(dp)
 
 
 
