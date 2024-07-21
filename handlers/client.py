@@ -31,3 +31,5 @@ def register_handlers(dp : Dispatcher):
     dp.register_message_handler(commands, commands=['commands','help'])
     dp.register_message_handler(socials, commands=['socials'])
     dp.register_message_handler(privacy, commands=['privacy'])
+
+    
